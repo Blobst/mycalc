@@ -4,6 +4,7 @@ set_languages("c++23")
 
 target("mycalc")
     set_kind("binary")
+    set_basename("mcc")
     add_files("src/*.cpp")
     add_links("stdc++exp")
     add_includedirs("src")
