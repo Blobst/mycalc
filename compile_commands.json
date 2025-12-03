@@ -1,0 +1,6 @@
+[
+{
+  "directory": "C:\\Users\\User\\projects\\mycalc",
+  "arguments": ["C:\\msys64\\mingw64\\bin\\g++.exe", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++23", "-fexceptions", "-DNDEBUG", "-o", "build\\.objs\\mycalc\\windows\\x64\\release\\src\\main.cpp.obj", "src\\main.cpp"],
+  "file": "src\\main.cpp"
+}]
