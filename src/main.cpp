@@ -7,7 +7,7 @@ int main() {
   double result{}; // Translates to double result = 0.0;
   char op;
   std::println("My Cool Calculator");
-  std::print("Enter 2 numbers: "); // Numbers added by a space e.g 20 1 not 201
+  std::print("Enter 2 numbers: "); // Numbers added by a space e.g. 20 1 not 201
   std::cin >> a >> b;
 
   std::print("Enter a operator or (q to quit): ");
