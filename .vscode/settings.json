@@ -72,6 +72,7 @@
         "__locale": "cpp",
         "__verbose_abort": "cpp",
         "barrier": "cpp",
-        "filesystem": "cpp"
+        "filesystem": "cpp",
+        "random": "cpp"
     }
 }
