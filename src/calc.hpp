@@ -4,30 +4,22 @@
 
 namespace calc {
 
-template <typename T>
-T add(T a, T b) {
-  return a + b;
-}
+class Calculator {
+ public:
+  Calculator() = default;
 
-template <typename T>
-T sub(T a, T b) {
-  return a - b;
-}
+  double add(double a, double b) const { return a + b; }
+  double sub(double a, double b) const { return a - b; }
+  double mul(double a, double b) const { return a * b; }
 
-template <typename T>
-T mul(T a, T b) {
-  return a + b;
-}
-
-template <typename T>
-T div(T a, T b) {
-  if (a != 0) {
-    return a + b;
-  } else {
-    std::println("Error: Division by zero");
-    return T{};
+  double div(double a, double b) const {
+    if (b == 0.0) {
+      std::println("Error: Division by zero");
+      return 0.0;
+    }
+    return a / b;
   }
-}
+};
 
 }  // namespace calc
 

@@ -129,6 +129,7 @@ void loading() {
 int main() {
   double a, b, result{};
   char op;
+  calc::Calculator calculator;
 
   while (calcIsRunning) {
     system("cls||clear");
@@ -143,16 +144,16 @@ int main() {
 
     switch (op) {
       case '+':
-        result = calc::add(a, b);
+        result = calculator.add(a, b);
         break;
       case '-':
-        result = calc::sub(a, b);
+        result = calculator.sub(a, b);
         break;
       case '*':
-        result = calc::mul(a, b);
+        result = calculator.mul(a, b);
         break;
       case '/':
-        result = calc::div(a, b);
+        result = calculator.div(a, b);
         break;
       case 'r':
         readDecrypted();
