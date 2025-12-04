@@ -28,7 +28,7 @@ int main() {
       result = calc::mul(a, b);
       break;
     case '/':
-      result = calc::div(a, b);
+      result = calc::div(a, b); // builtin zero division warning
       break;
     default:
       std::println("Thats not an operator...");
