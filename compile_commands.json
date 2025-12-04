@@ -1,16 +1,6 @@
 [
 {
   "directory": "C:\\Users\\User\\projects\\mycalc",
-  "arguments": ["C:\\msys64\\mingw64\\bin\\g++.exe", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++23", "-fexceptions", "-fmodules-ts", "-fmodules", "-D_GLIBCXX_USE_CXX11_ABI=1", "-DNDEBUG", "-fmodule-mapper=C:\\Users\\User\\AppData\\Local\\Temp\\.xmake\\251203\\63c6d2f2f2895029fcecc764a5064296\\add.ixx.mapper.txt", "-x", "c++", "-fmodules", "-o", "build\\.objs\\mycalc\\windows\\x64\\release\\src\\add.ixx.obj", "src\\add.ixx"],
-  "file": "src\\add.ixx"
-},
-{
-  "directory": "C:\\Users\\User\\projects\\mycalc",
-  "arguments": ["C:\\msys64\\mingw64\\bin\\g++.exe", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++23", "-fexceptions", "-fmodules-ts", "-fmodules", "-D_GLIBCXX_USE_CXX11_ABI=1", "-DNDEBUG", "-fmodule-mapper=C:\\Users\\User\\AppData\\Local\\Temp\\.xmake\\251203\\26350725bd6b7821b1988075bce73895\\std.cc.mapper.txt", "-x", "c++", "-fmodules", "-o", "build\\.objs\\mycalc\\windows\\x64\\release\\886aac5277b01740a5850de6dfac7de3\\std.cc.obj", "C:\\msys64\\mingw64\\include\\c++\\15.2.0\\bits\\std.cc"],
-  "file": "C:\\msys64\\mingw64\\include\\c++\\15.2.0\\bits\\std.cc"
-},
-{
-  "directory": "C:\\Users\\User\\projects\\mycalc",
-  "arguments": ["C:\\msys64\\mingw64\\bin\\g++.exe", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++23", "-fexceptions", "-fmodules-ts", "-fmodules", "-D_GLIBCXX_USE_CXX11_ABI=1", "-DNDEBUG", "-fmodule-mapper=C:\\Users\\User\\AppData\\Local\\Temp\\.xmake\\251203\\f755ddb69278b58e288d78b378d68ee3\\main.cpp.mapper.txt", "-o", "build\\.objs\\mycalc\\windows\\x64\\release\\src\\main.cpp.obj", "src\\main.cpp"],
+  "arguments": ["C:\\msys64\\mingw64\\bin\\g++.exe", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++23", "-Isrc", "-fexceptions", "-DNDEBUG", "-o", "build\\.objs\\mycalc\\windows\\x64\\release\\src\\main.cpp.obj", "src\\main.cpp"],
   "file": "src\\main.cpp"
 }]
