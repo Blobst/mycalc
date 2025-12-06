@@ -4,11 +4,13 @@
 #define BLUE "\033[34m"
 #define RESET "\033[0m"
 
-bool calcIsRunning = true;
-
-#include <bits/stdc++.h>
-
 #include "calc.hpp"
+#include <chrono>
+#include <fstream>
+#include <print>
+#include <thread>
+
+bool calcIsRunning = true;
 
 /*------------------ HIDDEN PASSWORD INPUT ------------------*/
 #ifdef _WIN32
@@ -16,7 +18,7 @@ bool calcIsRunning = true;
 std::string inputHidden() {
   std::string pw;
   char ch;
-  while ((ch = _getch()) != '\r') {  // Enter
+  while ((ch = _getch()) != '\r') { // Enter
     if (ch == '\b' && !pw.empty()) {
       pw.pop_back();
       std::cout << "\b \b";
@@ -47,8 +49,7 @@ std::string inputHidden() {
 #endif
 
 /*================= PASSWORD PROTECTED =================*/
-std::string PASSWORD = "admin";    // change it here
-std::string ENC_KEY = "mysecret";  // encryption key
+std::string PASSWORD = "admin"; // change it here
 
 bool passwordPrompt(std::string reason) {
   std::println(YELLOW "{} - Enter password:" RESET, reason);
@@ -60,7 +61,7 @@ bool passwordPrompt(std::string reason) {
 std::string key = "mysecretkey";
 
 // XOR encryption/decryption
-std::string xorCrypt(const std::string& text) {
+std::string xorCrypt(const std::string &text) {
   std::string out = text;
   for (size_t i = 0; i < text.size(); i++)
     out[i] = text[i] ^ key[i % key.size()];
@@ -73,11 +74,11 @@ void saveEncrypted(double result) {
                        std::istreambuf_iterator<char>());
   in.close();
 
-  std::string plain = xorCrypt(existing);  // decrypt old
-  plain += std::to_string(result) + "\n";  // add new entry
+  std::string plain = xorCrypt(existing); // decrypt old
+  plain += std::to_string(result) + "\n"; // add new entry
 
   std::ofstream out("hist.txt", std::ios::binary | std::ios::trunc);
-  out << xorCrypt(plain);  // encrypt whole file again
+  out << xorCrypt(plain); // encrypt whole file again
 }
 
 void readDecrypted() {
@@ -143,31 +144,31 @@ int main() {
     std::cin >> op;
 
     switch (op) {
-      case '+':
-        result = calculator.add(a, b);
-        break;
-      case '-':
-        result = calculator.sub(a, b);
-        break;
-      case '*':
-        result = calculator.mul(a, b);
-        break;
-      case '/':
-        result = calculator.div(a, b);
-        break;
-      case 'r':
-        readDecrypted();
-        std::this_thread::sleep_for(std::chrono::seconds(1));
-        continue;
-      case 'c':
-        cache_settings();
-        continue;
-      case 'q':
-        calcIsRunning = false;
-        continue;
-      default:
-        std::println(RED "Invalid operator." RESET);
-        continue;
+    case '+':
+      result = calculator.add(a, b);
+      break;
+    case '-':
+      result = calculator.sub(a, b);
+      break;
+    case '*':
+      result = calculator.mul(a, b);
+      break;
+    case '/':
+      result = calculator.div(a, b);
+      break;
+    case 'r':
+      readDecrypted();
+      std::this_thread::sleep_for(std::chrono::seconds(1));
+      continue;
+    case 'c':
+      cache_settings();
+      continue;
+    case 'q':
+      calcIsRunning = false;
+      continue;
+    default:
+      std::println(RED "Invalid operator." RESET);
+      continue;
     }
 
     loading();
