@@ -1,6 +1,6 @@
 [
 {
   "directory": "c:\\Users\\User\\projects\\mycalc",
-  "arguments": ["C:\\msys64\\mingw64\\bin\\g++.exe", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++23", "-Isrc", "-fexceptions", "-DNDEBUG", "-o", "build\\.objs\\mycalc\\windows\\x64\\release\\src\\main.cpp.obj", "src\\main.cpp"],
+  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe", "/c", "/nologo", "/m64", "/-target=x86_64-windows-msvc", "/target", "x86_64-windows-msvc", "/MD", "/Isrc", "/EHsc", "/Fobuild\\.objs\\mycalc\\windows\\x64\\src\\main.cpp.obj", "src\\main.cpp"],
   "file": "src\\main.cpp"
 }]
